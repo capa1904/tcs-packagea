@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
+  <metadata>
+    <id>@project@</id>
+    <version>@build.number@</version>
+    <title>@title@</title>
+    <authors>CP</authors>
+    <owners>carsten.paasch@materna.de</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>PackageA Component</description>
+    <copyright>CP</copyright>
+    <language>en-EN</language>
+    <tags>NuGetSamples</tags>
+  </metadata>  
+</package>
