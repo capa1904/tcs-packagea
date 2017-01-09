@@ -4,7 +4,7 @@ open System
 
 // -------------------------------------------------------------------------------------------------------------------------------------------------
 
-let targetDir = "target/"
+let targetDir = __SOURCE_DIRECTORY__@@"target/"
 let buildDir = targetDir @@ "build/"
 let nugetOutputFilesDir = targetDir @@ "nuget/"
 let nugetInputFilesDir = targetDir @@ "nugetFiles/"
