@@ -16,7 +16,11 @@ let testProjectFile = "PackageA.Test.Unit/PackageA.Test.Unit.csproj"
 let projectFile = "PackageA/PackageA.csproj"
 let packageName = "PackageA"
 let nuspecFile = "PackageA.nuspec"
-let version = getBuildParamOrDefault "version" "1.0.0"
+let buildSuffix = match System.Environment.GetEnvironmentVariable("BUILD_BRANCH") with
+                  | "develop" -> ""
+                  | _ -> "-pre"
+
+let version = getBuildParamOrDefault "version" "1.0.0" + buildSuffix
 
 // -------------------------------------------------------------------------------------------------------------------------------------------------
 
