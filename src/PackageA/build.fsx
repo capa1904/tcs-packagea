@@ -44,7 +44,7 @@ Target "Build" (fun _ ->
             Properties =["OutputPath", "../" @@ buildDir; "Configuration", getBuildParamOrDefault "buildMode" "Debug"]
             NodeReuse = false}) projectFile
     |> ignore    
-	
+
 )
 
 // -------------------------------------------------------------------------------------------------------------------------------------------------
