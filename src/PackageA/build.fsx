@@ -20,7 +20,7 @@ let buildSuffix = match System.Environment.GetEnvironmentVariable("BUILD_BRANCH"
                   | "develop" -> ""
                   | _ -> "-pre"
 
-let version = getBuildParamOrDefault "version" "1.0.0" + buildSuffix
+let version = getBuildParamOrDefault "version" "1.1.0" + buildSuffix
 
 // -------------------------------------------------------------------------------------------------------------------------------------------------
 
