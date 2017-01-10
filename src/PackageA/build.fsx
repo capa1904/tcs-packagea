@@ -2,7 +2,7 @@
 open Fake
 open System
 
-// -------------------------------------------------------------------------------------------------------------------------------------------------
+// --------------------------------------------------------------------------------------------------------------------------------------------------
 
 let targetDir = __SOURCE_DIRECTORY__@@"target/"
 let buildDir = targetDir @@ "build/"
@@ -11,7 +11,7 @@ let nugetInputFilesDir = targetDir @@ "nugetFiles/"
 
 let testBuildDir = targetDir @@ "test/"
 let testProjectFile = "PackageA.Test.Unit/PackageA.Test.Unit.csproj"
-// -------------------------------------------------------------------------------------------------------------------------------------------------
+// --------------------------------------------------------------------------------------------------------------------------------------------------
 
 let projectFile = "PackageA/PackageA.csproj"
 let packageName = "PackageA"
@@ -44,6 +44,8 @@ Target "Build" (fun _ ->
             Properties =["OutputPath", "../" @@ buildDir; "Configuration", getBuildParamOrDefault "buildMode" "Debug"]
             NodeReuse = false}) projectFile
     |> ignore    
+	
+	TeamCityBuildNumber "2.66.0.001"
 )
 
 // -------------------------------------------------------------------------------------------------------------------------------------------------
