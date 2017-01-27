@@ -20,6 +20,7 @@ namespace PackageA
             var assembly = Assembly.GetExecutingAssembly();
             var fileVersionInfo = FileVersionInfo.GetVersionInfo(assembly.Location);
             string productVersion = fileVersionInfo.ProductVersion;
+			//return productVersion
             return productVersion;
         }
 
